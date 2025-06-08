@@ -58,6 +58,14 @@
             "MediatR": {
               "target": "Package",
               "version": "[12.5.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.12.0, )"
             }
           },
           "imports": [
@@ -102,7 +110,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\RealState\\RealState\\RealState.Domain\\RealState.Domain.csproj": {
+                "projectPath": "D:\\RealState\\RealState\\RealState.Domain\\RealState.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -161,11 +173,7 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {
-              "D:\\RealState\\RealState\\RealState.Core\\RealState.Core.csproj": {
-                "projectPath": "D:\\RealState\\RealState\\RealState.Core\\RealState.Core.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {

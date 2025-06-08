@@ -1,0 +1,9 @@
+using RealState.Domain.Entities.Common;
+
+public class User : EntityBase
+{
+    public string Email { get; set; }
+    public byte[] PasswordHash { get; set; }
+    public byte[] PasswordSalt { get; set; }
+    public Role Role { get; set; }
+}

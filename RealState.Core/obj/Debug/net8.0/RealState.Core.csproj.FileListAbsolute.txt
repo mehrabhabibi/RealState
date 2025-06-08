@@ -1,0 +1,16 @@
+D:\RealState\RealState\RealState.Core\bin\Debug\net8.0\RealState.Core.deps.json
+D:\RealState\RealState\RealState.Core\bin\Debug\net8.0\RealState.Core.dll
+D:\RealState\RealState\RealState.Core\bin\Debug\net8.0\RealState.Core.pdb
+D:\RealState\RealState\RealState.Core\bin\Debug\net8.0\RealState.Domain.dll
+D:\RealState\RealState\RealState.Core\bin\Debug\net8.0\RealState.Domain.pdb
+D:\RealState\RealState\RealState.Core\obj\Debug\net8.0\RealState.Core.csproj.AssemblyReference.cache
+D:\RealState\RealState\RealState.Core\obj\Debug\net8.0\RealState.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\RealState\RealState\RealState.Core\obj\Debug\net8.0\RealState.Core.AssemblyInfoInputs.cache
+D:\RealState\RealState\RealState.Core\obj\Debug\net8.0\RealState.Core.AssemblyInfo.cs
+D:\RealState\RealState\RealState.Core\obj\Debug\net8.0\RealState.Core.csproj.CoreCompileInputs.cache
+D:\RealState\RealState\RealState.Core\obj\Debug\net8.0\RealState.Core.sourcelink.json
+D:\RealState\RealState\RealState.Core\obj\Debug\net8.0\RealStat.725971F3.Up2Date
+D:\RealState\RealState\RealState.Core\obj\Debug\net8.0\RealState.Core.dll
+D:\RealState\RealState\RealState.Core\obj\Debug\net8.0\refint\RealState.Core.dll
+D:\RealState\RealState\RealState.Core\obj\Debug\net8.0\RealState.Core.pdb
+D:\RealState\RealState\RealState.Core\obj\Debug\net8.0\ref\RealState.Core.dll
