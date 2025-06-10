@@ -8,5 +8,4 @@ public interface IUserService
     Task UpdateUserAsync(UserUpdateDto dto);
     Task DeleteUserAsync(int Id);
     Task<User> Authenticate(string email, string password);
-    bool VerifyPasswordHash(string password, byte[] storedHash, byte[] storedSalt);
 }

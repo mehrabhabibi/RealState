@@ -39,8 +39,6 @@ namespace RealState.API.Controllers
                 {
                     new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                     new Claim(ClaimTypes.Email, user.Email),
-                    new Claim(ClaimTypes.Name, user.Username)
-                    // Add additional claims as needed
                 }),
                 Expires = DateTime.UtcNow.AddMinutes(Convert.ToDouble(_config["Jwt:ExpiryInMinutes"])),
                 Issuer = _config["Jwt:Issuer"],
@@ -61,7 +59,6 @@ namespace RealState.API.Controllers
                 User = new 
                 {
                     user.Id,
-                    user.Username,
                     user.Email
                 }
             });

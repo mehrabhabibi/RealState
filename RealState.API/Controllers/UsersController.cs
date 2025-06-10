@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using RealState.API.ViewModels.UserViewModel;
 using RealState.API.Mapping;
+using System.Security.Cryptography;
+using System.Text;
 
 
 namespace RealState.API.Controllers;
@@ -25,9 +27,27 @@ public class UsersController : ControllerBase
         => Ok(await _userService.GetAllUsersAsync());
 
     [HttpPost]
-    public async Task CreateUser(UserCreateViewModel userCreateViewModel)
+    public async Task<IActionResult> CreateUser(UserCreateViewModel userCreateViewModel)
     {
-        await _userService.CreateUserAsync(userCreateViewModel.ToDto());
+
+        if (string.IsNullOrEmpty(userCreateViewModel.Password))
+            return BadRequest("Password is required");
+
+        byte[] passwordHash, passwordSalt;
+        CreatePasswordHash(userCreateViewModel.Password, out passwordHash, out passwordSalt);
+
+        await _userService.CreateUserAsync(userCreateViewModel.ToDto(passwordHash, passwordSalt));
+
+        return Ok(new { message = "User created successfully" });
+    }
+
+    private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
+    {
+        using (var hmac = new HMACSHA512())
+        {
+            passwordSalt = hmac.Key;
+            passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
+        }
     }
 
     [HttpPut("{id}")]

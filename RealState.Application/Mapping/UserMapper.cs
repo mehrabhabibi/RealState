@@ -12,6 +12,11 @@ public static class UserMapper
             LastName = dto.LastName,
             Email = dto.Email,
             Role = dto.Role,
+            Active = true,
+            Deleted = false,
+            CreatedAt = DateTime.UtcNow,
+            PasswordHash = dto.PasswordHash,
+            PasswordSalt = dto.PasswordSalt
         };
     }
 

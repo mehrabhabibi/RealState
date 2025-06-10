@@ -5,7 +5,7 @@ namespace RealState.API.Mapping;
 
 public static class UserMapper
 {
-    public static UserCreateDto ToDto(this UserCreateViewModel viewModel)
+    public static UserCreateDto ToDto(this UserCreateViewModel viewModel, byte[] passwordHash, byte[] passwordSalt)
     {
         return new UserCreateDto
         {
@@ -14,6 +14,8 @@ public static class UserMapper
             Email = viewModel.Email,
             Password = viewModel.Password,
             Role = viewModel.Role,
+            PasswordHash = passwordHash,
+            PasswordSalt = passwordSalt
         };
     }
 
