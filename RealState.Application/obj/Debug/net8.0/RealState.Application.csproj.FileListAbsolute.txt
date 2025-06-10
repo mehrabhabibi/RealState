@@ -1,9 +1,3 @@
-D:\RealState\RealState\RealState.Application\obj\Debug\net8.0\RealState.Application.csproj.AssemblyReference.cache
-D:\RealState\RealState\RealState.Application\obj\Debug\net8.0\RealState.Application.GeneratedMSBuildEditorConfig.editorconfig
-D:\RealState\RealState\RealState.Application\obj\Debug\net8.0\RealState.Application.AssemblyInfoInputs.cache
-D:\RealState\RealState\RealState.Application\obj\Debug\net8.0\RealState.Application.AssemblyInfo.cs
-D:\RealState\RealState\RealState.Application\obj\Debug\net8.0\RealState.Application.csproj.CoreCompileInputs.cache
-D:\RealState\RealState\RealState.Application\obj\Debug\net8.0\RealState.Application.sourcelink.json
 D:\RealState\RealState\RealState.Application\bin\Debug\net8.0\RealState.Application.deps.json
 D:\RealState\RealState\RealState.Application\bin\Debug\net8.0\RealState.Application.dll
 D:\RealState\RealState\RealState.Application\bin\Debug\net8.0\RealState.Application.pdb
@@ -11,6 +5,12 @@ D:\RealState\RealState\RealState.Application\bin\Debug\net8.0\RealState.Core.dll
 D:\RealState\RealState\RealState.Application\bin\Debug\net8.0\RealState.Domain.dll
 D:\RealState\RealState\RealState.Application\bin\Debug\net8.0\RealState.Domain.pdb
 D:\RealState\RealState\RealState.Application\bin\Debug\net8.0\RealState.Core.pdb
+D:\RealState\RealState\RealState.Application\obj\Debug\net8.0\RealState.Application.csproj.AssemblyReference.cache
+D:\RealState\RealState\RealState.Application\obj\Debug\net8.0\RealState.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\RealState\RealState\RealState.Application\obj\Debug\net8.0\RealState.Application.AssemblyInfoInputs.cache
+D:\RealState\RealState\RealState.Application\obj\Debug\net8.0\RealState.Application.AssemblyInfo.cs
+D:\RealState\RealState\RealState.Application\obj\Debug\net8.0\RealState.Application.csproj.CoreCompileInputs.cache
+D:\RealState\RealState\RealState.Application\obj\Debug\net8.0\RealState.Application.sourcelink.json
 D:\RealState\RealState\RealState.Application\obj\Debug\net8.0\RealStat.E88D7320.Up2Date
 D:\RealState\RealState\RealState.Application\obj\Debug\net8.0\RealState.Application.dll
 D:\RealState\RealState\RealState.Application\obj\Debug\net8.0\refint\RealState.Application.dll
