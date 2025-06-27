@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using RealState.Domain.DTOs.Authentication;
@@ -23,16 +24,16 @@ namespace RealState.API.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
         {
-            // 1. Validate user credentials
             var user = await _userService.Authenticate(loginDto.Email, loginDto.Password);
-            
+
             if (user == null)
                 return Unauthorized("Invalid credentials");
 
-            // 2. Generate JWT token
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_config["Jwt:Key"]);
-            
+
+            var now = DateTime.UtcNow;
+
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[]
@@ -40,23 +41,23 @@ namespace RealState.API.Controllers
                     new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                     new Claim(ClaimTypes.Email, user.Email),
                 }),
-                Expires = DateTime.UtcNow.AddMinutes(Convert.ToDouble(_config["Jwt:ExpiryInMinutes"])),
+                NotBefore = now.AddSeconds(-1),
+                Expires = now.AddMinutes(Convert.ToDouble(_config["Jwt:ExpiryInMinutes"])),
                 Issuer = _config["Jwt:Issuer"],
                 Audience = _config["Jwt:Audience"],
                 SigningCredentials = new SigningCredentials(
-                    new SymmetricSecurityKey(key), 
+                    new SymmetricSecurityKey(key),
                     SecurityAlgorithms.HmacSha256Signature)
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var tokenString = tokenHandler.WriteToken(token);
 
-            // 3. Return the token
-            return Ok(new 
+            return Ok(new
             {
                 Token = tokenString,
                 ExpiresIn = tokenDescriptor.Expires,
-                User = new 
+                User = new
                 {
                     user.Id,
                     user.Email

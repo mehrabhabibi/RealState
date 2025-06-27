@@ -7,6 +7,8 @@ using RealState.Core.Interfaces;
 using RealState.Infrastructure.Data.Repositories;
 using Microsoft.OpenApi.Models;
 using RealState.Application.Services;
+using RealState.Infrastructure.Data;
+using RealState.Domain.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -79,6 +81,8 @@ builder.Services.AddAuthorization(options =>
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IPropertyRepository, PropertyRepository>();
+builder.Services.AddScoped<IPropertyService, PropertyService>();
 
 var app = builder.Build();
 

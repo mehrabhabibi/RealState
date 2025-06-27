@@ -9,4 +9,7 @@ public class User : EntityBase
     public byte[] PasswordSalt { get; set; }
     public Role Role { get; set; }
     public DateTime? LastLogin { get; set; }
+    public int FailedLoginAttempts { get; set; }
+    public DateTime? LockoutEnd { get; set; }
+    public bool IsLockedOut => LockoutEnd.HasValue && LockoutEnd > DateTime.UtcNow;
 }

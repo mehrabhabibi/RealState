@@ -30,14 +30,14 @@ public static class UserMapper
         };
     }
 
-    public static UserDto ToDto(this User DataModel)
+    public static UserDto ToDto(this User dataModel)
     {
         return new UserDto
         {
-            FirstName = DataModel.FirstName,
-            LastName = DataModel.LastName,
-            Email = DataModel.Email,
-            Role = DataModel.Role,
+            FirstName = dataModel.FirstName,
+            LastName = dataModel.LastName,
+            Email = dataModel.Email,
+            Role = dataModel.Role,
         };
     }
 

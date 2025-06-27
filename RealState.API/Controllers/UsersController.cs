@@ -29,6 +29,10 @@ public class UsersController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> CreateUser(UserCreateViewModel userCreateViewModel)
     {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
 
         if (string.IsNullOrEmpty(userCreateViewModel.Password))
             return BadRequest("Password is required");
@@ -53,7 +57,7 @@ public class UsersController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateUser(UserUpdateViewModel userUpdateViewModel)
     {
-        if (GetUser(userUpdateViewModel.Id) != null) return NotFound();
+        if (GetUser(userUpdateViewModel.Id) == null) return NotFound();
         await _userService.UpdateUserAsync(userUpdateViewModel.ToDto());
         return NoContent();
     }
