@@ -1,4 +1,4 @@
-namespace RealState.API.ViewModels.UserViewModel;
+namespace RealState.API.ViewModels.User;
 
 public class UserUpdateViewModel
 {

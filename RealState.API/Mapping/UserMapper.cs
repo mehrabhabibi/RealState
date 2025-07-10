@@ -1,4 +1,4 @@
-using RealState.API.ViewModels.UserViewModel;
+using RealState.API.ViewModels.User;
 using RealState.Domain.DTOs.Users;
 
 namespace RealState.API.Mapping;
@@ -27,6 +27,21 @@ public static class UserMapper
             LastName = viewModel.LastName,
             Email = viewModel.Email,
             Password = viewModel.Password
+        };
+    }
+
+    public static IEnumerable<UserViewModel> ToViewModel(this IEnumerable<UserDto> dtos)
+    {
+        return dtos.Select(c => c.ToViewModel());
+    }
+
+    public static UserViewModel ToViewModel(this UserDto userDto)
+    {
+        return new UserViewModel
+        {
+            FirstName = userDto.FirstName,
+            LastName = userDto.LastName,
+            Email = userDto.Email
         };
     }
 }

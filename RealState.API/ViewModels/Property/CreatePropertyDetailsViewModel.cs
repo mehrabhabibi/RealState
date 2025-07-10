@@ -1,6 +1,6 @@
-namespace RealState.Domain.DTOs.Properties
+namespace RealState.API.ViewModels.Property
 {
-    public class CreatePropertyDetailsDto
+    public class CreatePropertyDetailsViewModel
     {
         public decimal SquareMeters { get; set; }
         public int YearBuilt { get; set; }

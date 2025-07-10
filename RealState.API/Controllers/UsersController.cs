@@ -1,8 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using RealState.API.ViewModels.UserViewModel;
+using RealState.API.ViewModels.User;
 using RealState.API.Mapping;
 using System.Security.Cryptography;
 using System.Text;
+using Microsoft.VisualBasic;
 
 
 namespace RealState.API.Controllers;
@@ -19,12 +20,12 @@ public class UsersController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<User>> GetUser(int id)
-        => Ok(await _userService.GetUserByIdAsync(id));
+    public async Task<ActionResult<UserViewModel>> GetUser(int id)
+    => Ok((await _userService.GetUserByIdAsync(id)).ToViewModel());
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<User>>> GetAllUsers()
-        => Ok(await _userService.GetAllUsersAsync());
+    public async Task<ActionResult<IEnumerable<UserViewModel>>> GetAllUsers()
+        => Ok((await _userService.GetAllUsersAsync()).ToViewModel());
 
     [HttpPost]
     public async Task<IActionResult> CreateUser(UserCreateViewModel userCreateViewModel)

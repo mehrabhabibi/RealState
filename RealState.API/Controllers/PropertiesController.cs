@@ -1,9 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using RealState.Application.DTOs;
-using RealState.Domain.DTOs.Properties;
-using RealState.Domain.Entities;
+using RealState.API.Mapping;
+using RealState.API.ViewModels.Property;
 using RealState.Domain.Interfaces;
-using RealState.Infrastructure.Data.Repositories;
 
 namespace RealState.API.Controllers
 {
@@ -23,11 +21,11 @@ namespace RealState.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<PropertyDto>>> GetAllProperties()
+        public async Task<ActionResult<IEnumerable<PropertyViewModel>>> GetAllProperties()
         {
             try
             {
-                var properties = await _propertyService.GetAllPropertiesAsync();
+                var properties = (await _propertyService.GetAllPropertiesAsync()).ToViewModel();
                 return Ok(properties);
             }
             catch (Exception ex)
@@ -38,11 +36,11 @@ namespace RealState.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<PropertyDto>> GetProperty(int id)
+        public async Task<ActionResult<PropertyViewModel>> GetProperty(int id)
         {
             try
             {
-                var property = await _propertyService.GetPropertyByIdAsync(id);
+                var property = (await _propertyService.GetPropertyByIdAsync(id)).ToViewModel();
 
                 if (property == null)
                 {
@@ -58,22 +56,21 @@ namespace RealState.API.Controllers
             }
         }
 
-        // POST: api/properties
         [HttpPost]
-        public async Task<ActionResult> CreateProperty(CreatePropertyDto createPropertyDto)
+        public async Task<ActionResult> CreateProperty(CreatePropertyViewModel viewModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            await _propertyService.CreatePropertyAsync(createPropertyDto);
+            await _propertyService.CreatePropertyAsync(viewModel.ToDto());
             return Ok(new { message = "Property created successfully" });
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProperty(PropertyDto updatePropertyDto)
+        public async Task<IActionResult> UpdateProperty(PropertyViewModel updatePropertyViewModel)
         {
-            if (_propertyService.GetPropertyByIdAsync(updatePropertyDto.Id) == null)
+            if (_propertyService.GetPropertyByIdAsync(updatePropertyViewModel.Id) == null)
             {
                 return NotFound();
             }
@@ -82,7 +79,7 @@ namespace RealState.API.Controllers
             {
                 return BadRequest(ModelState);
             }
-            await _propertyService.UpdatePropertyAsync(updatePropertyDto);
+            await _propertyService.UpdatePropertyAsync(updatePropertyViewModel.ToDto());
             return Ok(new { message = "Property updated successfully" });
         }
 

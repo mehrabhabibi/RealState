@@ -1,12 +1,12 @@
-namespace RealState.Domain.DTOs.Properties
+namespace RealState.API.ViewModels.Property
 {
-    public class CreatePropertyImageDto
+    public class CreatePropertyImageViewModel
     {
         public string ImageUrl { get; set; }
         public bool IsMain { get; set; }
     }
 
-    public class CreatePropertyVideoDto
+    public class CreatePropertyVideoViewModel
     {
         public string VideoUrl { get; set; }
         public string ThumbnailUrl { get; set; }
