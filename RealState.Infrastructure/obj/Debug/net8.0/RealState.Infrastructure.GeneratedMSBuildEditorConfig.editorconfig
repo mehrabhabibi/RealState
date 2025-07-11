@@ -16,6 +16,6 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RealState.Infrastructure
-build_property.ProjectDir = d:\RealState\RealState\RealState.Infrastructure\
+build_property.ProjectDir = D:\RealState\RealState\RealState.Infrastructure\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
