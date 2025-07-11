@@ -1,0 +1,28 @@
+# Build and project files
+bin/
+obj/
+*.dll
+*.pdb
+*.cache
+*.suo
+*.user
+
+# IDE/Editor folders
+.vs/
+.vscode/
+!.vscode/settings.json  # Keep VS Code settings
+
+# Dependencies
+node_modules/
+
+# Logs and temp files
+npm-debug.log
+yarn-error.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+*.env.local

@@ -13,5 +13,6 @@
         "**/bin": true,
         "**/obj": true
     },
-    "explorer.excludeGitIgnore": true  // Respects .gitignore rules
+    "explorer.excludeGitIgnore": true,  // Respects .gitignore rules
+    "git.showUntrackedFiles": "none"  // Hides untracked files
 }
