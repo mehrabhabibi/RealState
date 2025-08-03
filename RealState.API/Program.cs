@@ -9,6 +9,9 @@ using Microsoft.OpenApi.Models;
 using RealState.Application.Services;
 using RealState.Infrastructure.Data;
 using RealState.Domain.Interfaces;
+using System.Net.Http.Headers;
+using RealState.Domain.Entities.virtualMeeting;
+using RealState.Domain.Entities.VirtualMeeting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -77,6 +80,19 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("Admin", policy => policy.RequireRole(Role.Admin.ToString()));
     options.AddPolicy("EndUser", policy => policy.RequireRole(Role.EndUser.ToString()));
 });
+
+builder.Services.AddHttpClient<ZoomMeetingStrategy>(client => 
+{
+    client.BaseAddress = new Uri("https://api.zoom.us/v2/");
+    client.DefaultRequestHeaders.Accept.Add(
+        new MediaTypeWithQualityHeaderValue("application/json"));
+});
+
+builder.Services.Configure<GoogleSettings>(
+    builder.Configuration.GetSection("GoogleSettings"));
+    
+builder.Services.Configure<ZoomSettings>(
+    builder.Configuration.GetSection("ZoomSettings"));
 
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
