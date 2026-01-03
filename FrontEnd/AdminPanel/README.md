@@ -4,7 +4,7 @@
 ۱. فایل‌ها (File Naming)
 Hooks & Utils: تماماً kebab-case (مثلاً: use-search-products.ts)
 
-Components: تماماً PascalCase (مثلاً: ProductCard.tsx)
+Components: تماماً PascalCase (مثلاً: ProductCard.tsx) // هر فایلی ک پسوند tsx داشت
 
 Styles: تماماً kebab-case (مثلاً: main-layout.scss)
 
@@ -23,3 +23,26 @@ Constants: به صورت UPPER_SNAKE_CASE (مثلاً: API_BASE_URL)
 
 در کامپوننت از آن هوک استفاده کنید.
 
+src/
+├── app/
+│   ├── auth/                 # Login/Register Pages
+│   ├── dashboard/            # Admin/User Panel Dashboead Page route
+│   │   ├── components/
+│   │   └── styles/
+│   └── landing/              Panel
+│       ├── components/       Panel
+│       └── styles/.less
+├── common/
+│   ├──.tsx # Small UI Atoms (Buttons, Inputs)
+│   ├── content/              #  UI Molucules (customer-table,header...)
+│   └── layouts/              # <-- Layout Wrappers
+│       ├── main-layout/      # Public Layout (Header/Footer for Landing)
+│       ├── admin-layout/     # Dashboard Layout (Sidebar/Navbar)
+│       └── auth-layout/      # Simple Layout for Login/Register
+├── lib/
+│   ├── api/                  # axios-instance, endpoints, query-keys
+│   ├── hooks/                # get-queries, mutation-queries
+│   ├── store/                # Zustand (e.g., useAuthStore)
+│   └── utils/                # helpers.ts
+├── routes/                   # Routing logic (Public vs Private routes)
+└── assets/                   # Images, Icons, Global CSS
