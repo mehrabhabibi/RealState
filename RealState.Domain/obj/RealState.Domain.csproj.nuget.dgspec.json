@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\RealState\\RealState\\RealState.Domain\\RealState.Domain.csproj": {}
+    "d:\\RealState\\RealState\\RealState.Domain\\RealState.Domain.csproj": {}
   },
   "projects": {
-    "D:\\RealState\\RealState\\RealState.Domain\\RealState.Domain.csproj": {
+    "d:\\RealState\\RealState\\RealState.Domain\\RealState.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RealState\\RealState\\RealState.Domain\\RealState.Domain.csproj",
+        "projectUniqueName": "d:\\RealState\\RealState\\RealState.Domain\\RealState.Domain.csproj",
         "projectName": "RealState.Domain",
-        "projectPath": "D:\\RealState\\RealState\\RealState.Domain\\RealState.Domain.csproj",
+        "projectPath": "d:\\RealState\\RealState\\RealState.Domain\\RealState.Domain.csproj",
         "packagesPath": "C:\\Users\\mEhRaB\\.nuget\\packages\\",
-        "outputPath": "D:\\RealState\\RealState\\RealState.Domain\\obj\\",
+        "outputPath": "d:\\RealState\\RealState\\RealState.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mEhRaB\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

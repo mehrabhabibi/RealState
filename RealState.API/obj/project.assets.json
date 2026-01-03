@@ -106,7 +106,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.18": {
+      "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.22": {
         "type": "package",
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "7.1.2"
@@ -1931,10 +1931,10 @@
         "mediatr.contracts.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.18": {
-      "sha512": "Ty49uva5oIFa7nOkeL+6TGRU7DQohBaEGs+QcGoGSXq4d7MZnNueLte0HFa9WHvjZUDfJSQ1PVmWkFeIYS1w4Q==",
+    "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.22": {
+      "sha512": "3lqhBK+t4u8Ajl2je5UC9jCoDI+8zLz/YBVjwxQKfFF9NyzACf4QQmlmKnpH/LdkVSxCjLwvJ1ko4k0EAgy8cg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authentication.jwtbearer/8.0.18",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/8.0.22",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1942,7 +1942,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
         "lib/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
-        "microsoft.aspnetcore.authentication.jwtbearer.8.0.18.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.8.0.22.nupkg.sha512",
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
@@ -5157,11 +5157,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\RealState\\RealState\\RealState.API\\RealState.API.csproj",
+      "projectUniqueName": "d:\\RealState\\RealState\\RealState.API\\RealState.API.csproj",
       "projectName": "RealState.API",
-      "projectPath": "D:\\RealState\\RealState\\RealState.API\\RealState.API.csproj",
+      "projectPath": "d:\\RealState\\RealState\\RealState.API\\RealState.API.csproj",
       "packagesPath": "C:\\Users\\mEhRaB\\.nuget\\packages\\",
-      "outputPath": "D:\\RealState\\RealState\\RealState.API\\obj\\",
+      "outputPath": "d:\\RealState\\RealState\\RealState.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mEhRaB\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5177,11 +5177,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\RealState\\RealState\\RealState.Application\\RealState.Application.csproj": {
-              "projectPath": "D:\\RealState\\RealState\\RealState.Application\\RealState.Application.csproj"
+            "d:\\RealState\\RealState\\RealState.Application\\RealState.Application.csproj": {
+              "projectPath": "d:\\RealState\\RealState\\RealState.Application\\RealState.Application.csproj"
             },
-            "D:\\RealState\\RealState\\RealState.Infrastructure\\RealState.Infrastructure.csproj": {
-              "projectPath": "D:\\RealState\\RealState\\RealState.Infrastructure\\RealState.Infrastructure.csproj"
+            "d:\\RealState\\RealState\\RealState.Infrastructure\\RealState.Infrastructure.csproj": {
+              "projectPath": "d:\\RealState\\RealState\\RealState.Infrastructure\\RealState.Infrastructure.csproj"
             }
           }
         }
@@ -5247,7 +5247,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

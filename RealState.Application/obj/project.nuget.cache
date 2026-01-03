@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i66Zlmxr/mE=",
+  "dgSpecHash": "r1i/FbWJrVg=",
   "success": true,
-  "projectFilePath": "D:\\RealState\\RealState\\RealState.Application\\RealState.Application.csproj",
+  "projectFilePath": "d:\\RealState\\RealState\\RealState.Application\\RealState.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mEhRaB\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\mEhRaB\\.nuget\\packages\\mediatr\\12.5.0\\mediatr.12.5.0.nupkg.sha512",
