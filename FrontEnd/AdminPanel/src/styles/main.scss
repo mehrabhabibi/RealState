@@ -1,0 +1,7 @@
+@use 'reset'; 
+$primary: #2563eb;
+$sidebar-width: 260px;
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
